@@ -14,7 +14,6 @@ module ResistorColorDuo
   }
 
   def self.value(color_array)
-    val_array = color_array.slice(0..1).map { |color| value[color] }
-    val_array.join.to_i
+    (VALUE[color_array.first] * 10) + VALUE[color_array[1]]
   end
 end
