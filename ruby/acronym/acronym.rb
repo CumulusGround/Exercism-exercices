@@ -2,8 +2,7 @@
 module Acronym
   def self.abbreviate(sentence)
     sentence
-      .split(/[^a-zA-Z0-9]/)
-      .map { |word| word[0] }
+      .scan(/\b[a-zA-Z]/)
       .join.upcase
   end
 end
